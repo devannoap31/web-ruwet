@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Web Ruwet</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+   <style>
+      /* Styling sidebar */
+      .sidebar {
+         height: 100%;
+         width: 0;
+         position: fixed;
+         top: 0;
+         left: 0;
+         background-color: #000;
+         overflow-x: hidden;
+         transition: 0.5s;
+         padding-top: 60px;
+         z-index: 1;
+      }
+
+      .sidebar a {
+         padding: 10px 10px;
+         text-decoration: none;
+         font-size: 18px;
+         color: #fff;
+         display: block;
+         transition: 0.3s;
+      }
+
+      .sidebar a:hover {
+         background-color: #575757;
+      }
+
+      /* Center the logo */
+      .logo {
+         flex-grow: 1;
+         text-align: left;
+         font-size: 1.5rem;
+         font-weight: bold;
+      }
+
+      /* Hide the sidebar toggle button on desktop */
+      .sidebar-toggle {
+         display: none;
+      }
+
+      /* Show sidebar toggle button on mobile */
+      @media (max-width: 767.98px) {
+         .sidebar-toggle {
+            display: block;
+         }
+         .navbar-nav {
+            display: none;
+         }
+         .sidebar {
+            padding-top: 80px;
+         }
+      }
+
+      /* Custom style for the toggle button */
+      .navbar-toggler-icon {
+         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16'/%3E%3C/svg%3E");
+      }
+
+      /* Hero section styling */
+      .hero {
+         background-image: -webkit-gradient(linear, left top, left bottom, from(#212529), to(rgb(84, 84, 84)));
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+         color: white;
+      }
+
+      @media (max-width: 720px) {
+         .hero {
+            height: 50vh; /* Setengah layar pada mode mobile */
+         }
+      }
+   </style>
+</head>
+
+<body>
+
+   <!-- Header Section -->
+   <header class="bg-dark text-white py-3 fixed-top">
+      <div class="container d-flex justify-content-between align-items-center">
+         <!-- Sidebar toggle button for mobile -->
+         <button class="btn btn-dark sidebar-toggle" type="button" onclick="toggleNav()">
+            <span id="sidebarToggle">&#9776;</span>
+         </button>
+
+         <div class="logo">Web Ruwet</div>
+
+         <!-- Desktop navbar -->
+         <nav class="navbar navbar-expand-md d-none d-md-flex">
+            <ul class="navbar-nav">
+               <li class="nav-item">
+                  <a class="nav-link text-white" href="index.html">HOME</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link text-white" href="article_page.html">ARTICLE</a>
+               </li>
+            </ul>
+         </nav>
+      </div>
+   </header>
+
+   <!-- Hero Section -->
+   <section class="hero vh-100">
+      <h1 class="display-4">Selamat Datang di Web Ruwet</h1>
+      <p class="fs-4">Informasi Terkini seputar Politik, Kesehatan, Fashion, dan Lainnya</p>
+      <a class="btn btn-secondary mt-3" href="#mem">Our Member</a>
+   </section>
+
+   <!-- Highlight Section -->
+   <section id="article" class="py-5 bg-light">
+      <h2 class="text-center card bg-dark text-white py-3 px-5 mb-5" id="mem">Our Member</h2>
+      <div class="container">
+         <div class="row text-center">
+            <div class="col-md-4">
+               <div class="card h-100">
+                  <img src="assets/image/alex.jpg" class="card-img-top" alt="Artikel Politik">
+                  <div class="card-body">
+                     <h3 class="card-title">Alexa Kusuma Wardana</h3>
+                     <p class="card-text">UI/UX Designer.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="card h-100">
+                  <img src="assets/image/alex2.jpg" class="card-img-top" alt="Artikel Kesehatan">
+                  <div class="card-body">
+                     <h3 class="card-title">Devanno Andhika Putra</h3>
+                     <p class="card-text">Front-end developer.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="card h-100">
+                  <img src="assets/image/alex3.jpg" class="card-img-top" alt="Artikel Fashion">
+                  <div class="card-body">
+                     <h3 class="card-title">Sapta Nugraha</h3>
+                     <p class="card-text">Back-End developer.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Sidebar -->
+   <div id="mySidebar" class="sidebar bg-dark text-white">
+      <div class="mt-5">
+         <a class="nav-link text-white" href="index.html">HOME</a>
+         <a class="nav-link text-white" href="article_page.html">ARTICLE</a>
+      </div>
+   </div>
+
+   <footer>
+      <div class="card" style="border-radius: 0% ;text-align: center; background-color: black; color: white;">
+          <div class="card-body">
+              <div style="background-color: black ;border: -5px; border-color: white; display: inline;">
+                  <a href="https://www.facebook.com/" target="_blank"><img src="assets/icons/facebook.png" alt="facebook" style="width: 35px; height: auto;"></a>
+                  <a href="https://www.instagram.com/" target="_blank"><img src="assets/icons/instagram.png" alt="instagram" style="width: 35px; height: auto;"></a>
+                  <a href="https://www.tiktok.com/" target="_blank"><img src="assets/icons/tik-tok.png" alt="tik-tok" style="width: 35px; height: auto;"></a>
+                  <a href="https://www.linkedin.com/" target="_blank"><img src="assets/icons/linkedin.png" alt="linkedin" style="width: 35px; height: auto;"></a>
+              </div>
+              <div class="card-body">
+                  Need help? <a href="#" style="color: white;">Contact Us</a>
+              </div>
+              <div class="card-footer">
+                  <p>copyright &copy; 2024 WebRuwet</p>
+              </div>
+          </div>
+      </div>
+  </footer>
+   <script>
+      function toggleNav() {
+         const sidebar = document.getElementById("mySidebar");
+         const sidebarToggle = document.getElementById("sidebarToggle");
+
+         if (sidebar.style.width === "250px") {
+            sidebar.style.width = "0";
+            sidebarToggle.innerHTML = "&#9776;";
+         } else {
+            sidebar.style.width = "250px";
+            sidebarToggle.innerHTML = "&times;";
+         }
+      }
+   </script>
+</body>
+
+</html>
