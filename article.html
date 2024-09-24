@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Article</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+   <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"  rel="stylesheet" />
+   <!-- <style type="text/tailwindcss">
+      * {
+         border: 1px solid red;
+      }
+   </style> -->
+</head>
+<body class="bg-white">
+   <!-- navbar, sidebar, dll -->
+   <header>
+      <nav class="fixed top-0 left-0 right-0 z-50 border-gray-200 bg-slate-900">
+         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+               <span class="ml-5 text-3xl font-semibold whitespace-nowrap text-white">Web Ruwet</span>
+            </a>
+            
+            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 text-gray-400 hover:bg-gray-700 focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+               <span class="sr-only">Open main menu</span>
+               <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+               </svg>
+            </button>
+            
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+               <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border  rounded-2xl  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  bg-slate-800 md:bg-slate-900 border-gray-700">
+                  <li>
+                     <a href="index.html" class="block py-2 px-3  rounded md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white  hover:bg-slate-900">Home</a>
+                  </li>
+                  <li>
+                     <a href="article.html" class="block py-2 px-3  rounded  md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white hover:bg-slate-900">Article</a>
+                  </li>
+               </ul>
+            </div>
+         
+         </div>
+      </nav>
+   </header>
+
+
+   <main class="my-32 mx-4">
+   
+      <!-- ARTIKEL TRENDING -->
+      <div class="border-gray-900 border-4 md:mx-40 mb-4">
+         <div id="judul-trending" class="text-center text-3xl font-bold mb-4 bg-gray-900 text-white py-4">Trending Topik</div>       
+         
+         <!-- isi trending -->
+         <div class="md:flex flex-wrap">
+
+            <div class="mx-auto mb-4 max-w-80 text-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="assets/image/demokrasi era digital.jpg" alt="Masa Depan Demokrasi di Era Digital" />
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Masa Depan Demokrasi di Era Digital</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Rabu, 11 November 2022.</p>
+                  <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Baca Selengkapnya
+                  </a>
+               </div>
+            </div>
+
+            <div class="mx-auto mb-4 max-w-80 text-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="assets/image/demokrasi.jpg" alt="Masa Depan Demokrasi di Era Digital" />
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Pengaruh Lobi Politik terhadap Kebijakan Publik</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Selasa, 29 Mei 2022</p>
+                  <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Baca Selengkapnya
+                  </a>
+               </div>
+            </div>
+            
+         </div>
+               
+      </div>
+
+
+      <!-- Tombol Dropdown -->
+      <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="md:mx-40 mt-8 mb-4 text-white bg-green-800 hover:bg-green-900 focus:outline-none focus:ring-4 focus:ring-green-500 font-medium rounded-full text-sm px-5 py-2.5 text-center inline-flex items-center" type="button">
+         Pilih Kategori 
+         <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+         </svg>
+      </button>
+      <!-- Dropdown menu -->
+      <div id="dropdown" class="z-10 hidden bg-gray-800 divide-y divide-gray-100 rounded-lg shadow w-44">
+         <ul class="py-2 text-sm text-gray-50" aria-labelledby="dropdownDefaultButton">
+            <li>
+               <a href="article/politik/politik_category.html" class="block px-4 py-2 hover:bg-gray-700">Politik</a>
+            </li>
+            <li>
+               <a href="article/kesehatan/kesehatan_category.html" class="block px-4 py-2 hover:bg-gray-700">Kesehatan</a>
+            </li>
+            <li>
+               <a href="article/fashion/fashion_category.html" class="block px-4 py-2 hover:bg-gray-700">Fashion</a>
+            </li>
+         </ul>
+      </div>
+
+
+      <!-- ISI ARTIKEL ALL -->
+      <div class="border-gray-900 border-4 md:mx-40">
+         <div id="judul-trending" class="text-center text-3xl font-bold mb-4 bg-gray-900 text-white py-4">Artikel</div>       
+
+         <!-- isi ARTIKEL -->           
+            <div class="mb-4 mx-4 w-auto p-6 bg-gray-200 border border-gray-200 rounded-lg shadow">
+               <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Masa Depan Demokrasi di Era Digital</h5>
+               </a>
+               <p class="mb-3 font-normal text-gray-700">Rabu, 11 November 2022</p>
+               <a href="#" class="inline-flex items-center px-6 py-2 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                  Baca
+               </a>
+            </div>
+
+            <div class="mb-4 mx-4 w-auto p-6 bg-gray-200 border border-gray-200 rounded-lg shadow">
+               <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Pengaruh Lobi Politik terhadap Kebijakan Publik</h5>
+               </a>
+               <p class="mb-3 font-normal text-gray-700">Selasa, 29 Mei 2022</p>
+               <a href="#" class="inline-flex items-center px-6 py-2 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                  Baca
+               </a>
+            </div>
+
+            <div class="mb-4 mx-4 w-auto p-6 bg-gray-200 border border-gray-200 rounded-lg shadow">
+               <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Kebangkitan Populisme dan Implikasinya Terhadap Politik Global</h5>
+               </a>
+               <p class="mb-3 font-normal text-gray-700">Jumat, 28 Mei 2022</p>
+               <a href="#" class="inline-flex items-center px-6 py-2 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                  Baca
+               </a>
+            </div>
+
+            <div class="mb-4 mx-4 w-auto p-6 bg-gray-200 border border-gray-200 rounded-lg shadow">
+               <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Mengatasi Krisis Kesehatan Mental di Era Modern</h5>
+               </a>
+               <p class="mb-3 font-normal text-gray-700">Sabtu, 27 Mei 2022</p>
+               <a href="#" class="inline-flex items-center px-6 py-2 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                  Baca
+               </a>
+            </div>
+
+            <div class="mb-4 mx-4 w-auto p-6 bg-gray-200 border border-gray-200 rounded-lg shadow">
+               <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Pentingnya Vaksinasi dalam Pencegahan Penyakit Menular</h5>
+               </a>
+               <p class="mb-3 font-normal text-gray-700">Senin, 26 Mei 2022</p>
+               <a href="#" class="inline-flex items-center px-6 py-2 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                  Baca
+               </a>
+            </div>
+
+            <div class="mb-4 mx-4 w-auto p-6 bg-gray-200 border border-gray-200 rounded-lg shadow">
+               <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Gaya Hidup Sehat untuk Mencegah Penyakit Kronis</h5>
+               </a>
+               <p class="mb-3 font-normal text-gray-700">Kamis, 31 Juli 2023</p>
+               <a href="#" class="inline-flex items-center px-6 py-2 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                  Baca
+               </a>
+            </div>
+
+            <div class="mb-4 mx-4 w-auto p-6 bg-gray-200 border border-gray-200 rounded-lg shadow">
+               <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Tren Fashion Ramah Lingkungan: Masa Depan Industri Mode</h5>
+               </a>
+               <p class="mb-3 font-normal text-gray-700">Jumat, 1 Agustus 2023</p>
+               <a href="#" class="inline-flex items-center px-6 py-2 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                  Baca
+               </a>
+            </div>
+
+            <div class="mb-4 mx-4 w-auto p-6 bg-gray-200 border border-gray-200 rounded-lg shadow">
+               <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Evolusi Streetwear: Dari Subkultur ke Arus Utama</h5>
+               </a>
+               <p class="mb-3 font-normal text-gray-700">Sabtu, 2 Agustus 2023</p>
+               <a href="#" class="inline-flex items-center px-6 py-2 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                  Baca
+               </a>
+            </div>
+
+            <div class="mb-4 mx-4 w-auto p-6 bg-gray-200 border border-gray-200 rounded-lg shadow">
+               <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Pentingnya Pakaian Fungsional dalam Fashion Modern</h5>
+               </a>
+               <p class="mb-3 font-normal text-gray-700">Senin, 4 Agustus 2023</p>
+               <a href="#" class="inline-flex items-center px-6 py-2 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                  Baca
+               </a>
+            </div>
+         
+      </div>             
+   </main>
+
+
+   <footer class="bg-slate-900 text-white mt-4 py-3">
+      <div class="flex space-x-4 justify-center mt-10">
+         <a href="https://www.facebook.com/" target="_blank"><img src="assets/icons/facebook.png" class="w-8" alt="facebook"></a>
+         <a href="https://www.instagram.com/" target="_blank"><img src="assets/icons/instagram.png" class="w-8" alt="instagram" ></a>
+         <a href="https://www.tiktok.com/" target="_blank"><img src="assets/icons/tik-tok.png" class="w-8" alt="tik-tok" ></a>
+         <a href="https://www.linkedin.com/" target="_blank"><img src="assets/icons/linkedin.png" class="w-8" alt="linkedin"></a>
+      </div>
+
+      <div class="text-center mt-4 py-3">
+         <span>Need help? <a href="#" class="text-blue-200 underline">Contact Us</a></span><br>
+         <span>copyright &copy; 2024 WebRuwet</span>
+      </div>
+   </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+</body>
+</html>
